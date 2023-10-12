@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje 9 - Typing Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Learn <span class="typing-text"></span></h1>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        let typed = new Typed(".typing-text",{
+            strings: ["Javascript","HTML","CSS"],
+            typedSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+
+    </script>
+
+</body>
+</html>
