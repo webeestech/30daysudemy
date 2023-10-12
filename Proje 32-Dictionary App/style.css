@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #050505;
+    color: #fff;
+}
+
+.container {
+    width: 450px;
+    background: transparent;
+    border-radius: 5px;
+    padding: 30px 30px 45px;
+}
+
+.container header {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.container .search {
+    position: relative;
+    margin: 35px 0 16px;
+}
+
+.container .search input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #1F1F1F;
+    color: #fff;
+    padding: 0 50px;
+}
+
+.search i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9D4BE6;
+}
+
+.search .glass {
+    left: 15px;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.search .cancel {
+    right: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.search input:valid ~ .cancel {
+    display: block;
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #271541;
+}
+
+ul .word p {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+ul .word span {
+    font-size: 10px;
+    color: #D9D9D9;
+}
+
+ul .word i {
+    cursor: pointer;
+    font-size: 15px;
+    color: #9D4BE6;
+}
+
+.content li .details {
+    padding-left: 10px;
+    border-left: 3px solid #9D4BE6;
+    border-radius: 4px 0 0 4px;
+}
+
+.content li .details p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content li .details span {
+    font-size: 12px;
+    color: #D9D9D9;
+}
+
+.synonyms .details .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.synonyms .details .list span {
+    margin-right: 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.info {
+    color: #D9D9D9;
+    font-size: 15px;
+    text-align: center;
+}
+
+.container ul {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+
+.container.active ul {
+    height: 400px;
+    opacity: 1;
+}
+
+.container.active .info {
+    display: none;
+}
